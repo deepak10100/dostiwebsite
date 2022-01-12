@@ -1,0 +1,195 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dost</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        body{
+            background-image: url("https://source.unsplash.com/random");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+        }
+        .container{
+            /* border: 3px solid blue; */
+            /* width: fit-content; */
+            text-align: center;
+           /* margin: auto; */
+         /* margin-top: 1%; */
+         padding: 3px;
+
+        }
+        .btn{
+             /* margin-top: 8px;   */
+             /* margin-bottom: 8px; */
+             width: 50%;
+             height: 8%;
+             border: 3px solid blue;
+             border-radius: 50px;
+             cursor: pointer;
+             font-size: 200%;
+             font-weight: bold;
+             color:white;
+             background-color: blue;
+             outline: none;
+             
+        }
+        .btn:hover{
+            background-color: rgb(112, 112, 236);
+            border: none;
+            outline: none;
+            
+        }
+        .btn:active{
+            background-color: rgb(112, 112, 236);
+            /* border: 10px solid rebeccapurple; */
+            outline: none;
+            
+        }
+        
+        input{
+            outline: none;
+            margin-top: 10%;
+           background: none;
+            width: 40%;
+            height: 10%;
+            font-size: 300%;
+            text-align: center;
+            border: 3px solid blue;
+            border-radius: 10px;
+            color: blue;
+            
+        }
+        span{
+            color:green;
+            font-size: 30px;
+            font-weight: bold;
+        }
+        h1{
+            margin-top: 1px;
+            color: blue;
+            font-size: 500%;
+        }
+        .ptg{
+            
+            width: 40%;
+            height: 10%;
+            margin: 8%;
+            border: 3px solid blue;
+            border-radius: 40px;
+            background: none;
+            font-size: 40px;
+            color:blue;
+            font-weight: bold;
+        }
+        @media(min-width: 300px) and (max-width: 700px){
+                input{
+                    width: 80%;
+            height: 7%;
+            font-size:100%;
+            text-align: center;
+                    /* display: block;
+                    font-size: 20px; */
+                    /* /* margin-top: 10%; */
+                    /* margin-bottom: 10%; */
+                  
+                }
+                span{
+                
+                    display: block;
+                    margin:auto;
+                    margin-top: 1%;
+                    
+                }
+                .ptg{
+                    margin-top: 20%;
+                    font-size: 150%;
+                    
+                }
+                #inputbar1{
+                    margin-top: 10px;
+                }
+                /* #inputbar{
+                    margin-bottom: 10px;
+                } */
+        }
+        @media(min-width: 768px) and (max-width: 1024px){
+                input{
+                    width: 90%;
+            height: 10%;
+            font-size: 250%;
+            text-align: center;
+                    /* display: block;
+                    font-size: 20px; */
+                    /* /* margin-top: 10%; */
+                    /* margin-bottom: 10%; */
+                  
+                }
+                span{
+                
+                    display: block;
+                    margin:auto;
+                    margin-top: 1%;
+                    
+                }
+                .ptg{
+                    margin-top: 20%;
+                    font-size: 200%;
+                    
+                }
+                #inputbar1{
+                    margin-top: 10px;
+                }
+                /* #inputbar{
+                    margin-bottom: 10px;
+                } */
+        }
+      
+    
+        
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Dosti</h1>
+        <hr>
+        <input type="text" id="inputbar" placeholder="Enter The Name"> <span>+</span>
+        <input type="text" id="inputbar1" placeholder="Enter The Dost_Name"><br>
+
+        <input type="text" id="tge" class="ptg"placeholder="Percentage">
+        <button class="btn" id="bn" onclick="myfunc()" >Click</button>
+    </div>
+        
+      <script>
+          function myfunc(){
+            name = document.getElementById("inputbar").value;
+            dost = document.getElementById('inputbar1').value;
+
+            if (name =="") {
+                alert("Please enter the name")
+            } 
+            else if (!isNaN(name)) {
+                alert("Number not allowed")
+            }
+            else {
+                
+                let data = Math.random()*100;
+                 data = Math.floor(data);
+                 document.getElementById("tge").value = data+"%";
+              
+              
+            }
+        // document.getElementsByClassName("btn").disabled = true;
+          
+              
+          }
+          
+      </script> 
+
+</body>
+</html>
